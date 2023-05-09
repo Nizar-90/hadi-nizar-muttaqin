@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Form Biodata</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="form-input-biodata">
+      <header>
+         <h1>Form Input Biodata</h1>
+      </header>
+      <section>
+         <main>
+            <form action="">
+               <div>
+                  <label for="nama">nama lengkap</label>
+                  <input type="text" id="nama" name="nama">
+               </div>
+               <br>
+               <div>jenis kelamin
+                  <input type="radio" id="jk_1" name="jk" value="laki-laki">
+                  <label for="laki">laki-laki</label>
+                  <input type="radio" id="jk_2" name="jk" value="perempuan">
+                  <label for="perempuan" id="jk_p">perempuan</label>
+               </div>
+               <br>
+               <div id="rates">Hobi
+                  <input type="checkbox" id="hobi_baca_buku" value="hobi baca buku">
+                  <label for="cbbacaBuku">baca buku</label>
+                  <input type="checkbox" id="hobi_olahraga" value="olahraga">
+                  <label for="cbolahRaga" >Olah Raga</label>
+                  <input type="checkbox" id="hobi_mainGame" value="main game">
+                  <label for="cbMainGame">Main GAme</label>
+                  <input type="checkbox" id="hobi_hiking" value="hiking">
+                  <label for="cbhiking">Hiking</label>
+               </div>
+               <br>
+               <button id="myButton" type="button"  onclick="submitForm()">simpan</button>
+            </form>
+         </main>
+      </section>
+   </div>
+<script>
+
+function submitForm() {
+			let nama = document.getElementById("nama").value;
+			let jk = document.querySelector('input[name="jk"]:checked').value;
+			let hobi = [];
+			let checkboxes = document.querySelectorAll('input[name="hobi"]:checked');
+			for (let i = 0; i < checkboxes.length; i++) {
+				hobi.push(checkboxes[i].value);
+			}
+
+			alert("Nama: " + nama + "\nJenis Kelamin: " + jk + "\nHobi: " + hobi.join(", "));
+		}
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+.form-input-biodata{
+   display: flexbox;
+   margin: 50px;
+    border: 1px solid orange;
+    padding: 2px;
+ }
+
+ header{
+   margin: 2px;
+   border: 1px solid orange;
+}
+main{
+   margin: 2px;
+   border: 1px solid orange
+}
+
+main form{
+   margin-left: 2px;
+}
